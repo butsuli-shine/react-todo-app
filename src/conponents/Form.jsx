@@ -1,13 +1,13 @@
 const Form = (props) => (
-  <form className="siimple-form" onSubmit={props.handleAdd}>
-    <div className="siimple-form-field">
-      <label className="siimple-label siimple--color-white">Your todo:</label>
+  <form onSubmit={props.handleAdd}>
+    <div className="form-group row">
+      <label className="col-sm-2 col-form-label">Your todo:</label>
       <input name="title" type="text" className="siimple-input" />
       　
       <input
         type="submit"
         value="Add"
-        className="siimple-btn siimple-btn--teal"
+        className="btn btn-secondary btn-sm"
       />
     </div>
   </form>
