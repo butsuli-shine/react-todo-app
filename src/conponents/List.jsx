@@ -1,29 +1,27 @@
 import React from "react";
 
 let style = { maxWidth: "700px" };
-let btn = { cursor: "pointer" };
 
 const List = (props) => (
   <ul className="siimple-list">
     {props.todos.map((todo, i) => {
       return (
-        <li
-          key={i}
-          className="siimple-list-item siimple--bg-white"
-          style={style}
-        >
-          {todo.title}{" "}
-          <span
-            className="siimple-tag siimple-tag--error siimple-hover"
-            style={btn}
-            onClick={() => props.handleRemove(i)}
+        <div className="container">
+          <li
+            key={i}
+            className="list-group-item list-group-item-info"
+            style={style}
           >
-            Delete
-          </span>
-        </li>
+            {todo.title}{" "}
+          <div className="float-right">
+            <button type="button" className="btn btn-danger btn-sm" onClick={() => props.handleRemove(i)}>delete</button>
+          </div>
+          </li>
+        </div>
+
       );
     })}
-    ;
+
   </ul>
 );
 
