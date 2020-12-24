@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Form from "./Form";
 import List from "./List";
+import Navbar from "./Navbar";
+import Calender from "./Calendar"
 
 export default class App extends Component {
   constructor(props) {
@@ -8,6 +10,7 @@ export default class App extends Component {
     this.state = {
       todo: [],
     };
+
     this.handleAdd = this.handleAdd.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
   }
@@ -26,14 +29,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="siimple-box siimple--bg-dark">
-        <h1 className="siimple-box-title siimple--color-white">
-          Todo App
-        </h1>
-        <Form handleAdd={this.handleAdd} />
-        <div className="siimple-rule"></div>
-        <List todos={this.state.todo} handleRemove={this.handleRemove} />
+      <div>
+        <Navbar/>
+        <div className="p-3 mb-2 bg-info text-white">
+          <Form handleAdd={this.handleAdd} />
+          <List todos={this.state.todo} handleRemove={this.handleRemove} />
+        </div>
+        <Calender/>
       </div>
+
     );
+
   }
 }
