@@ -22,22 +22,22 @@ const Navbar = (props) => {
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
           <li className="nav-item active">
             <Link to="/" className="nav-link">
-              Home <span className="sr-only">(current)</span>
+            <i data-vi="home"></i>Home <span className="sr-only">(current)</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/Todo" className="nav-link">
-              Todo
+            <i data-vi="check"></i>Todo
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/Calendar" className="nav-link">
-              Calendar
+            <i data-vi="calendar"></i>Calendar
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/Caculator" className="nav-link">
-              Calculator
+            <i data-vi="calculator"></i>Calculator
             </Link>
           </li>
         </ul>
