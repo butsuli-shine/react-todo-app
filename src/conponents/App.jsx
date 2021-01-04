@@ -1,44 +1,21 @@
-import React, { Component } from "react";
-import Form from "./Form";
-import List from "./List";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import Calender from "./Calendar"
+import Home from "./Home";
+import Todo from "./Todo";
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      todo: [],
-    };
-
-    this.handleAdd = this.handleAdd.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
-  }
-
-  handleAdd(e) {
-    e.preventDefault();
-    this.state.todo.push({ title: e.target.title.value });
-    this.setState({ todo: this.state.todo });
-    e.target.title.value = "";
-  }
-
-  handleRemove(i) {
-    this.state.todo.splice(i, 1);
-    this.setState({ todo: this.state.todo });
-  }
-
-  render() {
-    return (
-      <div>
-        <Navbar/>
-        <div className="p-3 mb-2 bg-info text-white">
-          <Form handleAdd={this.handleAdd} />
-          <List todos={this.state.todo} handleRemove={this.handleRemove} />
+const App = () => {
+  return (
+    <div className="App">
+      <Router>
+        <div>
+          <Navbar />
+          <Route exact path="/" component={Home} />
+          <Route path="/Todo" component={Todo} />
         </div>
-        <Calender/>
-      </div>
+      </Router>
+    </div>
+  );
+};
 
-    );
-
-  }
-}
+export default App;

@@ -1,16 +1,46 @@
-const Form = (props) => (
-  <form onSubmit={props.handleAdd}>
-    <div className="form-group row">
-      <label className="col-sm-2 col-form-label">Your todo:</label>
-      <input name="title" type="text" className="siimple-input" />
-      　
-      <input
-        type="submit"
-        value="Add"
-        className="btn btn-secondary btn-sm"
-      />
+import React, { useState } from "react";
+
+const Form = (props) => {
+  const [task, setTask] = useState([]);
+
+  const handleNewTask = (event) => {
+    setTask(event.target.value);
+  };
+
+  const resetInput = () => {
+    setTask("");
+  };
+
+  const callAddTodoList = (event) => {
+    event.preventDefault();
+    props.addTodoList(task);
+    resetInput();
+  };
+
+  return (
+    <div>
+      <form>
+        <div className="form-group row">
+          <label className="col-sm-2 col-form-label">Your todo:</label>
+          <input
+            type="text"
+            className="siimple-input"
+            value={task}
+            onChange={handleNewTask}
+          />
+          　
+          <button
+            type="button"
+            className="btn btn-secondary btn-sm"
+            onClick={callAddTodoList}
+          >
+            {" "}
+            Add
+          </button>
+        </div>
+      </form>
     </div>
-  </form>
-);
+  );
+};
 
 export default Form;

@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 const navStyle = {
   "background-color": "#e3f2fd",
-}
+};
 const Navbar = (props) => {
   return (
     <nav className="navbar navbar-light" style={navStyle}>
       <a className="navbar-brand" href="/">
-        物理シャインのページ
+        TodoApp!
       </a>
       <button
         className="navbar-toggler"
@@ -22,20 +24,16 @@ const Navbar = (props) => {
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
           <li className="nav-item active">
-            <a className="nav-link" href="/">
+            <Link to="/" className="nav-link">
               Home <span className="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">
-              Link
-            </a>
+            <Link to="/Todo" className="nav-link">
+              Todo
+            </Link>
           </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" href="/">
-              Disabled
-            </a>
-          </li>
+          <li className="nav-item"></li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <input
