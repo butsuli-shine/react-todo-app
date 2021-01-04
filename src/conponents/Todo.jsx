@@ -14,7 +14,7 @@ const Todo = () => {
   };
 
   return (
-    <div className="p-3 mb-2 bg-info text-white">
+    <div className="p-3 mb-2">
       <Form todos={todoList} addTodoList={addTodoList} />
       <List todos={todoList} deleteTodoList={deleteTodoList} />
     </div>

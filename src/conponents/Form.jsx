@@ -21,10 +21,10 @@ const Form = (props) => {
     <div>
       <form>
         <div className="form-group row">
-          <label className="col-sm-2 col-form-label">Your todo:</label>
+          <label className="col-sm-2">Your todo:</label>
           <input
             type="text"
-            className="siimple-input"
+            className=""
             value={task}
             onChange={handleNewTask}
           />

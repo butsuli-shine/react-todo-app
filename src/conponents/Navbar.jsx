@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
 
-const navStyle = {
-  "background-color": "#e3f2fd",
-};
 const Navbar = (props) => {
   return (
-    <nav className="navbar navbar-light" style={navStyle}>
-      <a className="navbar-brand" href="/">
-        TodoApp!
-      </a>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary" >
+      <Link to="/" className="navbar-brand">
+        Application
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -33,7 +30,16 @@ const Navbar = (props) => {
               Todo
             </Link>
           </li>
-          <li className="nav-item"></li>
+          <li className="nav-item">
+            <Link to="/Calendar" className="nav-link">
+              Calendar
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/Caculator" className="nav-link">
+              Calculator
+            </Link>
+          </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <input

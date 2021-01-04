@@ -12,7 +12,7 @@ const List = (props) => {
       <div className="container">
         <li
           key={index}
-          className="list-group-item list-group-item-info"
+          className="list-group-item "
           style={style}
         >
           {todo.content}{" "}
