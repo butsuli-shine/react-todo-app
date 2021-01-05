@@ -12,36 +12,46 @@ const Form = (props) => {
   };
 
   const callAddTodoList = (event) => {
-    event.preventDefault();
-    props.addTodoList(task);
-    resetInput();
+    if (!(task === undefined || task === null) || task === "") {
+      event.preventDefault();
+      props.addTodoList(task);
+      resetInput();
+    } else {
+      return;
+    }
+  };
+
+  const returnFalse = () => {
+    return false;
   };
 
   return (
     <div>
-      <form className="form-group">
+      <form className="form-group" onsubmit={returnFalse}>
         <div className="row">
           <div className="col-xs-3">
             <div className="col-auto">
-              <label className="col-form-label col-form-label-lg">Your todo:</label>
+              <label className="col-form-label col-form-label-lg">
+                Your todo:
+              </label>
 
-            <input
-              type="text"
-              className="form-control"
-              value={task}
-              onChange={handleNewTask}
-            />
+              <input
+                type="text"
+                className="form-control"
+                value={task}
+                onChange={handleNewTask}
+              />
             </div>
             <div className="col-auto">
               <button
-                type="button"
                 className="btn btn-success"
+                type="button"
                 onClick={callAddTodoList}
               >
-              {" "}
-              Add
+                {" "}
+                Add
               </button>
-              </div>
+            </div>
           </div>
         </div>
       </form>

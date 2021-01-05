@@ -10,7 +10,7 @@ const Todo = () => {
   };
 
   const deleteTodoList = (index) => {
-    setTodoList(todoList.filter(item => todoList[index] !== item));
+    setTodoList(todoList.filter((item) => todoList[index] !== item));
   };
 
   return (

@@ -10,11 +10,7 @@ const List = (props) => {
   const TodoListItems = props.todos.map((todo, index) => {
     return (
       <div className="container">
-        <li
-          key={index}
-          className="list-group-item "
-          style={style}
-        >
+        <li key={index} className="list-group-item " style={style}>
           {todo.content}{" "}
           <div className="float-right">
             <button
