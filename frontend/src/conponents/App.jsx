@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Todo from "./Todo";
 import Calendar from "./Calendar";
+import Translator from "./Transrator"
+
 const App = () => {
   return (
     <div className="App">
@@ -11,8 +13,9 @@ const App = () => {
         <div>
           <Navbar />
           <Route exact path="/" component={Home} />
-          <Route path="/Todo" component={Todo} />
-          <Route path="/Calendar" component={Calendar} />
+          <Route exact path="/Todo" component={Todo} />
+          <Route exact path="/Calendar" component={Calendar} />
+          <Route exact path="/Translater" component={Translator}/>
         </div>
       </Router>
     </div>

@@ -41,6 +41,11 @@ const Navbar = (props) => {
               <i data-vi="calculator"></i>Calculator
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/Translator" className="nav-link">
+              Translator
+            </Link>
+          </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <input
