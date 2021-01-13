@@ -16,8 +16,6 @@ const Form = (props) => {
       event.preventDefault();
       props.addTodoList(task);
       resetInput();
-    } else {
-      return;
     }
   };
 
