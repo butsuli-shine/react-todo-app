@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import Home from "./Home";
-import Todo from "./Todo";
-import Calendar from "./Calendar";
-import Translator from "./Transrator"
+import Home from "./Home/Home";
+import Todo from "./Todo/Todo";
+import Calendar from "./Calendar/Calendar";
+import Translator from "./Translator/Translator"
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/Todo" component={Todo} />
           <Route exact path="/Calendar" component={Calendar} />
-          <Route exact path="/Translater" component={Translator}/>
+          <Route exact path="/Translator" component={Translator}/>
         </div>
       </Router>
     </div>
