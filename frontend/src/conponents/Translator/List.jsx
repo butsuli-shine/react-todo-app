@@ -1,7 +1,9 @@
 const List = (props) => {
+    
+    console.log(props.translatedSentence);
     return (
         <div>
-            {props.sentence}
+            <p>{props.translatedSentence}</p>
         </div>
     )
 }
