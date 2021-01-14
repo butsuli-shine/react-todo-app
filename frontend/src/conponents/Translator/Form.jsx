@@ -12,7 +12,6 @@ const Form = (props) => {
     props.setTarget(event.target.value);
   };
 
-
   return (
     <div>
       <form className="form-group">
@@ -40,7 +39,7 @@ const Form = (props) => {
                 </select>
               </div>
               <div className="form-group">
-                  <label htmlFor="targetText">翻訳語の言語</label>
+                <label htmlFor="targetText">翻訳語の言語</label>
                 <select
                   className="form-control"
                   name="target"
@@ -50,7 +49,13 @@ const Form = (props) => {
                   <option value="en">English</option>
                 </select>
               </div>
-              <button className="btn-success" type="button" onClick={props.doGet}>Translate</button>
+              <button
+                className="btn-success"
+                type="button"
+                onClick={props.doGet}
+              >
+                Translate
+              </button>
             </div>
           </div>
         </div>
