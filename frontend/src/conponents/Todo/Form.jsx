@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
 const Form = (props) => {
-  const [task, setTask] = useState([]);
+  const [content, setContent] = useState([]);
 
-  const handleNewTask = (event) => {
-    setTask(event.target.value);
+  const handleNewContent = (event) => {
+    setContent(event.target.value);
   };
 
   const resetInput = () => {
-    setTask("");
+    setContent("");
   };
 
   const callAddTodoList = (event) => {
-    if (!(task === undefined || task === null) || task === "") {
+    if (!(content === undefined || content === null) || content === "") {
       event.preventDefault();
-      props.addTodoList(task);
+      props.addTodoList(content);
       resetInput();
     }
   };
@@ -36,8 +36,8 @@ const Form = (props) => {
               <input
                 type="text"
                 className="form-control"
-                value={task}
-                onChange={handleNewTask}
+                value={content}
+                onChange={handleNewContent}
               />
             </div>
             <div className="col-auto">
