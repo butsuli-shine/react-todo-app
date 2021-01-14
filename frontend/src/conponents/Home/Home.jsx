@@ -13,7 +13,7 @@ const Home = () => {
       <h3>skills</h3>
       <p>a</p>
     </div>
-  )
+  );
 };
 
 export default Home;

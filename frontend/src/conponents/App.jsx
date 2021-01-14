@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Home from "./Home/Home";
 import Todo from "./Todo/Todo";
 import Calendar from "./Calendar/Calendar";
-import Translator from "./Translator/Translator"
+import Translator from "./Translator/Translator";
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/Todo" component={Todo} />
           <Route exact path="/Calendar" component={Calendar} />
-          <Route exact path="/Translator" component={Translator}/>
+          <Route exact path="/Translator" component={Translator} />
         </div>
       </Router>
     </div>
