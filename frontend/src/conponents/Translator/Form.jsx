@@ -34,8 +34,11 @@ const Form = (props) => {
                   name="src"
                   onChange={handleSource}
                 >
-                  <option value="ja">Japanese</option>
-                  <option value="en">English</option>
+                  <option value="ja">日本語</option>
+                  <option value="en">英語</option>
+                  <option value="af">アフリカーンス語</option>
+                  <option value="sq">アルバニア語</option>
+
                 </select>
               </div>
               <div className="form-group">
@@ -45,8 +48,10 @@ const Form = (props) => {
                   name="target"
                   onChange={handleTarget}
                 >
-                  <option value="ja">Japanese</option>
-                  <option value="en">English</option>
+                  <option value="ja">日本語</option>
+                  <option value="en">英語</option>
+                  <option value="af">アフリカーンス語</option>
+                  <option value="sq">アルバニア語</option>
                 </select>
               </div>
               <button
