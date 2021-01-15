@@ -38,7 +38,6 @@ const Form = (props) => {
                   <option value="en">英語</option>
                   <option value="af">アフリカーンス語</option>
                   <option value="sq">アルバニア語</option>
-
                 </select>
               </div>
               <div className="form-group">
