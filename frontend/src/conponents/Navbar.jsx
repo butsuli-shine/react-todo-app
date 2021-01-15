@@ -37,13 +37,8 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/Caculator" className="nav-link">
-              <i data-vi="calculator"></i>Calculator
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link to="/Translator" className="nav-link">
-              Translator
+              <i data-vi="vr"></i>Translator
             </Link>
           </li>
         </ul>
@@ -53,12 +48,6 @@ const Navbar = (props) => {
             type="search"
             placeholder="Search"
           />
-          <button
-            className="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-          >
-            Search
-          </button>
         </form>
       </div>
     </nav>
