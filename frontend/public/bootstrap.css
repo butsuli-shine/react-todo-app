@@ -71,6 +71,11 @@ body {
   background-color: #222;
 }
 
+body div.Home{
+  width:700px;
+  margin-right: auto;
+  margin-left : auto;
+}
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
